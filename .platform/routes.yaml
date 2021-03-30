@@ -1,0 +1,19 @@
+# The routes of the project.
+#
+# Each route describes how an incoming URL is going
+# to be processed by Platform.sh.
+
+'https://www.{default}-admin':
+  type: upstream
+  upstream: 'kia-admin:http'
+
+# "https://{default}/":
+#     type: redirect
+#     to: "https://www.{default}/"
+
+'https://www.{default}-client':
+  type: upstream
+  upstream: 'kia-client:http'
+# "https://{default}/":
+#     type: redirect
+#     to: "https://www.{default}/"
