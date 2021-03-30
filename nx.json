@@ -1,0 +1,44 @@
+{
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "npmScope": "kia-fe",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "ODQ1YTE2ZDMtYmYyNy00Y2EyLWE5NWEtYWFkZDRhZjg3NmY0fHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "projects": {
+    "kia-client": {
+      "tags": []
+    },
+    "kia-client-e2e": {
+      "tags": [],
+      "implicitDependencies": ["kia-client"]
+    },
+    "kia-admin": {
+      "tags": []
+    },
+    "kia-admin-e2e": {
+      "tags": [],
+      "implicitDependencies": ["kia-admin"]
+    }
+  }
+}
