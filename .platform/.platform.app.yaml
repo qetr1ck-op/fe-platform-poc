@@ -9,7 +9,6 @@ hooks:
   # The build hook runs after yarn has been downloaded.
   # No services are available but the disk is writeable.
   build: |
-    cd ../..
     npm i
     npm run build kia-admin
     # Move committed files in soon-to-be mounts into temp directory.
